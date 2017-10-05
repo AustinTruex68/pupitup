@@ -1,0 +1,30 @@
+{
+  "name": "pupitup",
+  "version": "1.0.0",
+  "description": "A simple jQuery plugin that allows you to inject pups",
+  "main": "jquery.pupitup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AustinTruex68/pupitup.git"
+  },
+  "keywords": [
+    "pups",
+    "pupitup",
+    "pup",
+    "inject",
+    "picture",
+    "inject"
+  ],
+  "author": "Austin Truex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AustinTruex68/pupitup/issues"
+  },
+  "homepage": "https://github.com/AustinTruex68/pupitup#readme",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
