@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuey Plugin</title>
+</head>
+
+<body>
+    <div style="width: 500px; margin:0 auto;">
+        <h1>Welcome to pupitup!</h1>
+        <p>This jQuery plugin will allow you to simply type "pupitup" anywhere within your selected element, it will then magically replace those words with a pup!!
+            <br>
+            <br> You can view a list of all supported pups <a target="_blank" href="https://dog.ceo/api/breeds/list/all">here</a>
+            <br>
+            <br>
+            <p><strong>NOTICE:</strong> You must be hosting your application on a server for this plugin to work. (local or otherwise)</p>
+            <br>
+            <br> Example:
+            <br>
+            <p>Simply create a <code style="background-color: #E6E6E6">&lt;span></code> tag, and place pupitup within! Like this!
+                <br>
+                <br>
+                <code style="background-color: #E6E6E6">&lt;span>pupitup&lt;/span></code>
+                <br>
+                <br>Then in your jQuery..
+                <br>
+                <br>
+                <code style="background-color: #E6E6E6">$('span').pupitup();</code>
+                <br>
+                <br> The Result:
+                <br><span>pupitup</span></p>
+            <br>
+            <p>There are also options you can pass it, such as te breed of the pup you would like to see! Let's go ahead and try a pug!</p>
+            <br>
+            <br>
+            <code style="background-color: #E6E6E6">&lt;p id="pug">pupitup&lt;/p></code>
+            <br>
+            <code style="background-color: #E6E6E6">$('#pug').pupitup({pupType:"pug"});</code>
+            <br>
+            <br> The Result:
+            <br>
+            <p id="pug">pupitup</span>
+            </p>
+            <p>By default it will set the height and width of the image to 200px, we can change that as well!</p>
+            <br>
+            <br>
+            <code style="background-color: #E6E6E6">&lt;p id="boxer">pupitup&lt;/p></code>
+            <br>
+            <code style="background-color: #E6E6E6">$('#pug').pupitup({pupType:"pug", pupWidth:"300px", pupHeight:"400px"});</code>
+            <br>
+            <br> The Result:
+            <br>
+            <p id="boxer">pupitup</span>
+            </p>
+            <p>We can also add a border to our pup!</p>
+            <br>
+            <br>
+            <code style="background-color: #E6E6E6">&lt;p id="bulldog">pupitup&lt;/p></code>
+            <br>
+            <code style="background-color: #E6E6E6">$('#pug').pupitup({pupType:"bulldog", pupBorder:"5px solid red"});</code>
+            <br>
+            <br> The Result:
+            <br>
+            <p id="bulldog">pupitup</span>
+            </p>
+    </div>
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- my pupify plugin -->
+    <script src="jquery.pupitup.js"></script>
+    <!-- the local script -->
+    <script>
+    $(document).ready(function($) {
+        $('#pug').pupitup({ pupType: "pug" });
+        $("#boxer").pupitup({ pupType: "boxer", pupWidth: "300px", pupHeight: "400px" });
+        $("#bulldog").pupitup({ pupType: "bulldog", pupBorder: "5px solid red" });
+        $('span').pupitup();
+    });
+    </script>
+</body>
+
+</html>
